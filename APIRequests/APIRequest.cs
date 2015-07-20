@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Waypoint.Enums;
-using Waypoint.Enums.v2;
 
 namespace Waypoint.APIRequests
 {
@@ -17,16 +16,15 @@ namespace Waypoint.APIRequests
         /// A new request to Guild Wars 2
         /// </summary>
         /// <param name="apiKey">The ANet provided API Key</param>
-        /// <param name="endpoint"></param>
+        /// <param name="endpoint">The selected endpoint to make the request</param>
         public APIRequest(string apiKey, APIEndpoints endpoint)
         {
             _apiKey = apiKey;
             _endpoint = endpoint;
         }
 
-        internal IAPIResponse MakeRequest()
+        IAPIResponse IAPIRequest.MakeRequest()
         {
-            // make the request on the _endpooint and return a response.
 
             throw new NotImplementedException();
         }
