@@ -8,5 +8,6 @@ namespace Waypoint
 {
     public class Waypoint
     {
+        APIRequests.APIRequest test = new APIRequests.APIRequest("test", Enums.APIEndpoints.QUAGGANS);
     }
 }
